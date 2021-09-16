@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "695863631732",
+    "firebase_url": "https://proyecto-de-grado-app-default-rtdb.firebaseio.com",
+    "project_id": "proyecto-de-grado-app",
+    "storage_bucket": "proyecto-de-grado-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695863631732:android:6161b7ba1b6687631e1621",
+        "android_client_info": {
+          "package_name": "com.example.medicineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695863631732-kctnfl6vdfj25cdg651motrl7abgfac0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu9iKeTqajZJOHmq5VrlGBDVCKb7bRhkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695863631732-kctnfl6vdfj25cdg651motrl7abgfac0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695863631732:android:09ec26976d7d4b341e1621",
+        "android_client_info": {
+          "package_name": "com.proyeto.medicineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695863631732-kctnfl6vdfj25cdg651motrl7abgfac0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu9iKeTqajZJOHmq5VrlGBDVCKb7bRhkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695863631732-kctnfl6vdfj25cdg651motrl7abgfac0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
