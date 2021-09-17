@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
+import com.proyeto.medicineapp.ui.view.MainActivityView
 
 class LoginActivity : AppCompatActivity() {
 
@@ -37,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(correoEdt.text.toString(), passwordEdt.text.toString()).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, MainActivityView::class.java)
                             startActivity(intent)
                         } else {
                             showErrorAlert()

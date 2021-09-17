@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MedicineApp">
         <activity android:name="com.proyeto.medicineapp.activitys.DeleteActivity"></activity>
         <activity android:name="com.proyeto.medicineapp.activitys.AddMedActivity" />
-        <activity android:name="com.proyeto.medicineapp.activitys.MainActivity" />
+        <activity android:name="com.proyeto.medicineapp.ui.view.MainActivityView" />
         <activity android:name="com.proyeto.medicineapp.activitys.RegistroActivity" />
         <activity android:name="com.proyeto.medicineapp.activitys.LoginActivity">
             <intent-filter>
