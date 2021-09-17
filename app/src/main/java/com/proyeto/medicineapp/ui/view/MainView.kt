@@ -18,7 +18,7 @@ import com.google.firebase.ktx.Firebase
 import com.proyeto.medicineapp.activitys.AddMedActivity
 import com.proyeto.medicineapp.activitys.Medicamento
 
-class MainActivityView : AppCompatActivity() {
+class MainView : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

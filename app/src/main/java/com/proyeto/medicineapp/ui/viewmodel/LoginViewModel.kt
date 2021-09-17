@@ -1,4 +1,7 @@
 package com.proyeto.medicineapp.ui.viewmodel
 
-class LoginViewModel {
+import androidx.lifecycle.ViewModel
+
+class LoginViewModel : ViewModel() {
+
 }
