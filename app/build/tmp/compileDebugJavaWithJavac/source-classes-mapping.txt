@@ -1,0 +1,14 @@
+com/proyeto/medicineapp/databinding/ActivityDeleteBinding.java
+ com.proyeto.medicineapp.databinding.ActivityDeleteBinding
+com/proyeto/medicineapp/databinding/ActivityRegistroBinding.java
+ com.proyeto.medicineapp.databinding.ActivityRegistroBinding
+com/proyeto/medicineapp/databinding/ViewMedsBinding.java
+ com.proyeto.medicineapp.databinding.ViewMedsBinding
+com/proyeto/medicineapp/databinding/ActivityLoginBinding.java
+ com.proyeto.medicineapp.databinding.ActivityLoginBinding
+com/proyeto/medicineapp/BuildConfig.java
+ com.proyeto.medicineapp.BuildConfig
+com/proyeto/medicineapp/databinding/ActivityAddMedBinding.java
+ com.proyeto.medicineapp.databinding.ActivityAddMedBinding
+com/proyeto/medicineapp/databinding/ActivityMainBinding.java
+ com.proyeto.medicineapp.databinding.ActivityMainBinding

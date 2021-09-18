@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MedicineApp</string>
+    <string name="campos_vacios">No deje campos vacios</string>
 </resources>

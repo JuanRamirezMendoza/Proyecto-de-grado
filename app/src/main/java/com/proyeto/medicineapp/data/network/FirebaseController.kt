@@ -1,17 +1,15 @@
 package com.proyeto.medicineapp.data.network
 
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 
 class FirebaseController {
-    fun auth(email: String, password: String) {
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password).addOnCompleteListener {
-            if(it.isSuccessful){
 
-            }else{
+    private var instance: FirebaseAuth = FirebaseAuth.getInstance()
 
-            }
-        }
+    fun auth(email: String, password: String): Task<AuthResult> {
+        return instance.signInWithEmailAndPassword(email, password)
     }
 }
 
