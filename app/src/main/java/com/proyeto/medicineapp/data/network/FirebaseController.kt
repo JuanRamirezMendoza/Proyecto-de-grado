@@ -16,4 +16,8 @@ class FirebaseController {
             }
         }
     }
+
+    fun hasSession(): Boolean{
+        return instance.currentUser != null
+    }
 }

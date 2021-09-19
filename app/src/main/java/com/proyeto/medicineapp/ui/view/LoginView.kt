@@ -12,6 +12,7 @@ import com.proyeto.medicineapp.databinding.ActivityLoginBinding
 import com.proyeto.medicineapp.ui.viewmodel.ERRORES
 import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
 import com.proyeto.medicineapp.ui.viewmodel.NAVIGATIONS
+import com.proyeto.medicineapp.ui.viewmodel.SUCCESS
 
 class LoginView : AppCompatActivity() {
 
@@ -37,8 +38,16 @@ class LoginView : AppCompatActivity() {
         loginViewModel.errores.observe(this, {
             when (it) {
                 ERRORES.EMPTY_FIELDS -> {
+
                 }
                 ERRORES.WRONG_CREDENTIALS -> {
+                }
+            }
+        })
+        loginViewModel.success.observe(this, {
+            when (it) {
+                SUCCESS.LOGIN_SUCCES -> {
+                    showSuccesfulAlert()
                 }
             }
         })
@@ -51,6 +60,7 @@ class LoginView : AppCompatActivity() {
                 NAVIGATIONS.GO_MAIN_VIEW -> {
                     val intent = Intent(context, MainView::class.java)
                     context.startActivity(intent)
+                    finish()
                 }
             }
         })

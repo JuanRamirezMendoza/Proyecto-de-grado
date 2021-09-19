@@ -2164,6 +2164,7 @@ id line3
 id linear
 id listMode
 id list_item
+id log_out
 id mainLayout
 id masked
 id match_constraint
@@ -2271,7 +2272,6 @@ id radio
 id ratio
 id rectangles
 id recyclerViewList
-id refresh_button
 id registrarseButton
 id registrarseConfirmButton
 id reverseSawtooth

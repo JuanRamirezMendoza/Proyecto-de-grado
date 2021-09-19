@@ -1,5 +1,6 @@
 package com.proyeto.medicineapp.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -30,6 +31,7 @@ class MainActivityAdapter(
         return MainActivityAdapter.MyViewHolder(view)
     }
 
+    @SuppressLint("SimpleDateFormat")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val medicamento = list[position]
         holder.nombreMedTxt.text = medicamento.nombre

@@ -37,7 +37,7 @@ class MainView : AppCompatActivity() {
         val collection = db.collection("medicamentos")
 
         val add_button = findViewById<FloatingActionButton>(R.id.addButton)
-        val refresh_button = findViewById<FloatingActionButton>(R.id.refresh_button)
+        val refresh_button = findViewById<FloatingActionButton>(R.id.log_out)
 
         refresh_button.setOnClickListener {
             onResume()

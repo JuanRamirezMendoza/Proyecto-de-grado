@@ -8,6 +8,13 @@ class LoginViewModel : BaseViewModel() {
     val email: MutableLiveData<String> = MutableLiveData("")
     val password: MutableLiveData<String> = MutableLiveData("")
 
+    init {
+        if (firebaseController.hasSession()){
+            navigation.value = NAVIGATIONS.GO_MAIN_VIEW
+        }
+
+    }
+
     fun login() {
         val em = email.value ?: ""
         val pas = password.value ?: ""
