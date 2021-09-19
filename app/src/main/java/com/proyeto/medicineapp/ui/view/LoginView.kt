@@ -1,7 +1,5 @@
 package com.proyeto.medicineapp.ui.view
 
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -11,7 +9,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.proyeto.medicineapp.activitys.RegistroActivity
 import com.proyeto.medicineapp.databinding.ActivityLoginBinding
+import com.proyeto.medicineapp.ui.viewmodel.ERRORES
 import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
+import com.proyeto.medicineapp.ui.viewmodel.NAVIGATIONS
 
 class LoginView : AppCompatActivity() {
 
@@ -19,10 +19,14 @@ class LoginView : AppCompatActivity() {
 
     private val loginViewModel: LoginViewModel by viewModels()
 
+    private val context = this
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.lifecycleOwner = this
+        binding.viewModel = loginViewModel
 
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -30,21 +34,25 @@ class LoginView : AppCompatActivity() {
         )
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
-
-        binding.iniciarSesionButton.setOnClickListener {
-            try {
-                var correo = binding.correoEdt.text.toString()
-                var password = binding.passwordEdt.text.toString()
-                var activity: Activity = LoginView()
-                loginViewModel.login(correo, password, activity)
-            } catch (e: Exception) {
-                e.printStackTrace()
+        loginViewModel.errores.observe(this, {
+            when (it) {
+                ERRORES.EMPTY_FIELDS -> {
+                }
+                ERRORES.WRONG_CREDENTIALS -> {
+                }
             }
-        }
-
-        binding.registrarseButton.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, RegistroActivity::class.java)
-            startActivity(intent)
+        })
+        loginViewModel.navigation.observe(this, {
+            when (it) {
+                NAVIGATIONS.GO_REGISTER_VIEW -> {
+                    val intent = Intent(context, RegistroActivity::class.java)
+                    context.startActivity(intent)
+                }
+                NAVIGATIONS.GO_MAIN_VIEW -> {
+                    val intent = Intent(context, MainView::class.java)
+                    context.startActivity(intent)
+                }
+            }
         })
 
     }

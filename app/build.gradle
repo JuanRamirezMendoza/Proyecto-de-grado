@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,6 +35,9 @@ android {
 
     viewBinding {
         enabled = true
+    }
+    buildFeatures{
+        dataBinding true
     }
 }
 
