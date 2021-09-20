@@ -12,18 +12,17 @@ class LoginViewModel : BaseViewModel() {
         if (firebaseController.hasSession()){
             navigation.value = NAVIGATIONS.GO_MAIN_VIEW
         }
-
     }
 
     fun login() {
-        val em = email.value ?: ""
-        val pas = password.value ?: ""
+        val emailLogin = email.value ?: ""
+        val passwordLogin = password.value ?: ""
         try {
-            if (em.isEmpty()
-                || pas.isEmpty()
+            if (emailLogin.isEmpty()
+                || passwordLogin.isEmpty()
             ) errores.value = ERRORES.EMPTY_FIELDS
             else {
-                val model = LoginModel(em, pas)
+                val model = LoginModel(emailLogin, passwordLogin)
                 model.auth({
                     navigation.value = NAVIGATIONS.GO_MAIN_VIEW
                 }, {

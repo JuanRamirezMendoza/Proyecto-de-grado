@@ -14,7 +14,7 @@
         <activity android:name="com.proyeto.medicineapp.activitys.DeleteActivity"></activity>
         <activity android:name="com.proyeto.medicineapp.activitys.AddMedActivity" />
         <activity android:name="com.proyeto.medicineapp.ui.view.MainView" />
-        <activity android:name="com.proyeto.medicineapp.activitys.RegistroActivity" />
+        <activity android:name="com.proyeto.medicineapp.ui.view.RegistroView" />
         <activity android:name="com.proyeto.medicineapp.ui.view.LoginView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
