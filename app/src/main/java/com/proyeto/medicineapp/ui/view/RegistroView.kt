@@ -7,14 +7,31 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.proyeto.medicineapp.R
 import com.google.firebase.auth.FirebaseAuth
+import com.proyeto.medicineapp.databinding.ActivityLoginBinding
+import com.proyeto.medicineapp.databinding.ActivityRegistroBinding
+import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
+import com.proyeto.medicineapp.ui.viewmodel.RegistroViewModel
 
 class RegistroView : AppCompatActivity() {
+
+    private lateinit var binding: ActivityRegistroBinding
+
+    private val registroViewModel: RegistroViewModel by viewModels()
+
+    private val context = this
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registro)
+
+        binding = ActivityRegistroBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.lifecycleOwner = this
+        binding.viewModelRegistro = registroViewModel
+
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN

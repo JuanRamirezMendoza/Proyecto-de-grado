@@ -26,7 +26,7 @@ class LoginView : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.lifecycleOwner = this
-        binding.viewModel = loginViewModel
+        binding.viewModelLogin = loginViewModel
 
         /**
          * method that hide the action bar

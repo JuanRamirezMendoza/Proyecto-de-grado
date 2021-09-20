@@ -1,83 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".ui.view.LoginView"
-    android:background="@drawable/background">
+<layout>
 
-    <LinearLayout
+    <data>
+        <variable
+            name="viewModelRegistro"
+            type="com.proyeto.medicineapp.ui.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:background="@drawable/background"
+        android:padding="16dp"
+        tools:context=".ui.view.RegistroView">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            app:srcCompat="@drawable/logo" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:id="@+id/correoRegistrarseTxtInput"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/ic_person"
-            android:hint="Correo">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/correoRegistrarseEdt"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/logo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/correoRegistrarseTxtInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Correo"
+                app:startIconDrawable="@drawable/ic_person">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:id="@+id/contraseñaRegsitrarseTxtInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/ic_password"
-            android:hint="Contraseña">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correoRegistrarseEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/contraseñaRegsitrarseEdt"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contraseñaRegsitrarseTxtInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Contraseña"
+                app:startIconDrawable="@drawable/ic_password">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:id="@+id/contraseñaConfirmRegistrarseTxtInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/ic_password"
-            android:hint="Confirmar Contraseña">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contraseñaRegsitrarseEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/contraseñaConfirmRegistrarseEdt"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contraseñaConfirmRegistrarseTxtInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                android:hint="Confirmar Contraseña"
+                app:startIconDrawable="@drawable/ic_password">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contraseñaConfirmRegistrarseEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/registrarseConfirmButton"
-            android:layout_width="155dp"
-            android:background="@drawable/rounded_button"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="registrarse" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/registrarseConfirmButton"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_button"
+                android:text="registrarse" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
