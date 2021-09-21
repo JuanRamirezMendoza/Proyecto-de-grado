@@ -39,7 +39,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/correoEdt"
-                    android:text="@={viewModel.email}"
+                    android:text="@={viewModelLogin.email}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -55,7 +55,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/passwordEdt"
-                    android:text="@={viewModel.password}"
+                    android:text="@={viewModelLogin.password}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -69,20 +69,19 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/iniciarSesionButton"
                     android:layout_width="155dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
                     android:background="@drawable/rounded_button"
-                    android:onClick="@{()-> viewModel.login()}"
+                    android:onClick="@{()-> viewModelLogin.login()}"
                     android:text="iniciar sesion" />
 
                 <Button
                     android:id="@+id/registrarseButton"
                     android:layout_width="155dp"
                     android:layout_height="wrap_content"
-                    android:onClick="@{()-> viewModel.register()}"
+                    android:onClick="@{()-> viewModelLogin.register()}"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button"
                     android:text="registrarse" />

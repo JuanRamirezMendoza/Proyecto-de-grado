@@ -1,6 +1,5 @@
 package com.proyeto.medicineapp.ui.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
@@ -9,28 +8,30 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import com.proyeto.medicineapp.R
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.proyeto.medicineapp.databinding.ActivityLoginBinding
+import com.proyeto.medicineapp.R
+import com.proyeto.medicineapp.data.extensionfunctions.toast
 import com.proyeto.medicineapp.databinding.ActivityRegistroBinding
-import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
-import com.proyeto.medicineapp.ui.viewmodel.RegistroViewModel
+import com.proyeto.medicineapp.ui.viewmodel.ERRORES
+import com.proyeto.medicineapp.ui.viewmodel.RegisterViewModel
 
 class RegistroView : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistroBinding
 
-    private val registroViewModel: RegistroViewModel by viewModels()
+    private val registerViewModel: RegisterViewModel by viewModels()
 
     private val context = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.lifecycleOwner = this
-        binding.viewModelRegistro = registroViewModel
+        binding.viewModelRegistro = registerViewModel
 
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -38,6 +39,15 @@ class RegistroView : AppCompatActivity() {
         )
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
+
+        registerViewModel.errores.observe(this, {
+            when (it) {
+                ERRORES.EMPTY_FIELDS -> {
+                    toast("No deje campos vacios")
+                }
+                else -> ERRORES.NO_ERROR
+            }
+        })
 
         val correo = findViewById<EditText>(R.id.correoRegistrarseEdt)
         val contraseña = findViewById<EditText>(R.id.contraseñaRegsitrarseEdt)

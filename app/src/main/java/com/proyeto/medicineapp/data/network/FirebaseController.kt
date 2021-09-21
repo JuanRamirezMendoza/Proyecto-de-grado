@@ -17,6 +17,10 @@ class FirebaseController {
         }
     }
 
+    fun register(){
+
+    }
+
     fun hasSession(): Boolean{
         return instance.currentUser != null
     }
