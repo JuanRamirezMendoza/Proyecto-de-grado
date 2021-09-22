@@ -1,4 +1,4 @@
-package com.proyeto.medicineapp.adapter
+package com.proyeto.medicineapp.ui.view.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
