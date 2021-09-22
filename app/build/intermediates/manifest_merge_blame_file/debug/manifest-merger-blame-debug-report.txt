@@ -54,9 +54,9 @@
 32        <activity android:name="com.proyeto.medicineapp.ui.view.MainView" />
 32-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:16:9-77
 32-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:16:19-74
-33        <activity android:name="com.proyeto.medicineapp.activitys.RegistroActivity" />
-33-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:9-87
-33-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:19-84
+33        <activity android:name="com.proyeto.medicineapp.ui.view.RegisterView" />
+33-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:9-81
+33-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:19-78
 34        <activity android:name="com.proyeto.medicineapp.ui.view.LoginView" >
 34-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:18:9-24:20
 34-->D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:18:19-75

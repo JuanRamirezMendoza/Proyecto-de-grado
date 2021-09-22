@@ -21,6 +21,8 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final android.widget.Button mboundView3;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback1;
@@ -32,36 +34,36 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     private androidx.databinding.InverseBindingListener correoEdtandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewModel.email.getValue()
-            //         is viewModel.email.setValue((java.lang.String) callbackArg_0)
+            // Inverse of viewModelLogin.email.getValue()
+            //         is viewModelLogin.email.setValue((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(correoEdt);
             // localize variables for thread safety
-            // viewModel.email.getValue()
-            java.lang.String viewModelEmailGetValue = null;
-            // viewModel.email
-            androidx.lifecycle.MutableLiveData<java.lang.String> viewModelEmail = null;
-            // viewModel
-            com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModel = mViewModel;
-            // viewModel != null
-            boolean viewModelJavaLangObjectNull = false;
-            // viewModel.email != null
-            boolean viewModelEmailJavaLangObjectNull = false;
+            // viewModelLogin.email
+            androidx.lifecycle.MutableLiveData<java.lang.String> viewModelLoginEmail = null;
+            // viewModelLogin.email.getValue()
+            java.lang.String viewModelLoginEmailGetValue = null;
+            // viewModelLogin
+            com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
+            // viewModelLogin.email != null
+            boolean viewModelLoginEmailJavaLangObjectNull = false;
+            // viewModelLogin != null
+            boolean viewModelLoginJavaLangObjectNull = false;
 
 
 
-            viewModelJavaLangObjectNull = (viewModel) != (null);
-            if (viewModelJavaLangObjectNull) {
+            viewModelLoginJavaLangObjectNull = (viewModelLogin) != (null);
+            if (viewModelLoginJavaLangObjectNull) {
 
 
-                viewModelEmail = viewModel.getEmail();
+                viewModelLoginEmail = viewModelLogin.getEmail();
 
-                viewModelEmailJavaLangObjectNull = (viewModelEmail) != (null);
-                if (viewModelEmailJavaLangObjectNull) {
-
-
+                viewModelLoginEmailJavaLangObjectNull = (viewModelLoginEmail) != (null);
+                if (viewModelLoginEmailJavaLangObjectNull) {
 
 
-                    viewModelEmail.setValue(((java.lang.String) (callbackArg_0)));
+
+
+                    viewModelLoginEmail.setValue(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -69,36 +71,36 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     private androidx.databinding.InverseBindingListener passwordEdtandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewModel.password.getValue()
-            //         is viewModel.password.setValue((java.lang.String) callbackArg_0)
+            // Inverse of viewModelLogin.password.getValue()
+            //         is viewModelLogin.password.setValue((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(passwordEdt);
             // localize variables for thread safety
-            // viewModel.password != null
-            boolean viewModelPasswordJavaLangObjectNull = false;
-            // viewModel.password.getValue()
-            java.lang.String viewModelPasswordGetValue = null;
-            // viewModel
-            com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModel = mViewModel;
-            // viewModel.password
-            androidx.lifecycle.MutableLiveData<java.lang.String> viewModelPassword = null;
-            // viewModel != null
-            boolean viewModelJavaLangObjectNull = false;
+            // viewModelLogin
+            com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
+            // viewModelLogin.password != null
+            boolean viewModelLoginPasswordJavaLangObjectNull = false;
+            // viewModelLogin.password
+            androidx.lifecycle.MutableLiveData<java.lang.String> viewModelLoginPassword = null;
+            // viewModelLogin.password.getValue()
+            java.lang.String viewModelLoginPasswordGetValue = null;
+            // viewModelLogin != null
+            boolean viewModelLoginJavaLangObjectNull = false;
 
 
 
-            viewModelJavaLangObjectNull = (viewModel) != (null);
-            if (viewModelJavaLangObjectNull) {
+            viewModelLoginJavaLangObjectNull = (viewModelLogin) != (null);
+            if (viewModelLoginJavaLangObjectNull) {
 
 
-                viewModelPassword = viewModel.getPassword();
+                viewModelLoginPassword = viewModelLogin.getPassword();
 
-                viewModelPasswordJavaLangObjectNull = (viewModelPassword) != (null);
-                if (viewModelPasswordJavaLangObjectNull) {
-
-
+                viewModelLoginPasswordJavaLangObjectNull = (viewModelLoginPassword) != (null);
+                if (viewModelLoginPasswordJavaLangObjectNull) {
 
 
-                    viewModelPassword.setValue(((java.lang.String) (callbackArg_0)));
+
+
+                    viewModelLoginPassword.setValue(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -112,15 +114,15 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
             , (com.google.android.material.textfield.TextInputEditText) bindings[1]
             , (com.google.android.material.textfield.TextInputLayout) bindings[6]
             , (android.widget.ImageView) bindings[5]
-            , (android.widget.Button) bindings[3]
             , (com.google.android.material.textfield.TextInputEditText) bindings[2]
             , (com.google.android.material.textfield.TextInputLayout) bindings[7]
             , (android.widget.Button) bindings[4]
             );
         this.correoEdt.setTag(null);
-        this.iniciarSesionButton.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView3 = (android.widget.Button) bindings[3];
+        this.mboundView3.setTag(null);
         this.passwordEdt.setTag(null);
         this.registrarseButton.setTag(null);
         setRootTag(root);
@@ -151,8 +153,8 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
-        if (BR.viewModel == variableId) {
-            setViewModel((com.proyeto.medicineapp.ui.viewmodel.LoginViewModel) variable);
+        if (BR.viewModelLogin == variableId) {
+            setViewModelLogin((com.proyeto.medicineapp.ui.viewmodel.LoginViewModel) variable);
         }
         else {
             variableSet = false;
@@ -160,12 +162,12 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
             return variableSet;
     }
 
-    public void setViewModel(@Nullable com.proyeto.medicineapp.ui.viewmodel.LoginViewModel ViewModel) {
-        this.mViewModel = ViewModel;
+    public void setViewModelLogin(@Nullable com.proyeto.medicineapp.ui.viewmodel.LoginViewModel ViewModelLogin) {
+        this.mViewModelLogin = ViewModelLogin;
         synchronized(this) {
             mDirtyFlags |= 0x4L;
         }
-        notifyPropertyChanged(BR.viewModel);
+        notifyPropertyChanged(BR.viewModelLogin);
         super.requestRebind();
     }
 
@@ -173,13 +175,13 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModelEmail((androidx.lifecycle.MutableLiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelLoginEmail((androidx.lifecycle.MutableLiveData<java.lang.String>) object, fieldId);
             case 1 :
-                return onChangeViewModelPassword((androidx.lifecycle.MutableLiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelLoginPassword((androidx.lifecycle.MutableLiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModelEmail(androidx.lifecycle.MutableLiveData<java.lang.String> ViewModelEmail, int fieldId) {
+    private boolean onChangeViewModelLoginEmail(androidx.lifecycle.MutableLiveData<java.lang.String> ViewModelLoginEmail, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -188,7 +190,7 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
         }
         return false;
     }
-    private boolean onChangeViewModelPassword(androidx.lifecycle.MutableLiveData<java.lang.String> ViewModelPassword, int fieldId) {
+    private boolean onChangeViewModelLoginPassword(androidx.lifecycle.MutableLiveData<java.lang.String> ViewModelLoginPassword, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -205,41 +207,41 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewModelEmailGetValue = null;
-        androidx.lifecycle.MutableLiveData<java.lang.String> viewModelEmail = null;
-        java.lang.String viewModelPasswordGetValue = null;
-        com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModel = mViewModel;
-        androidx.lifecycle.MutableLiveData<java.lang.String> viewModelPassword = null;
+        java.lang.String viewModelLoginEmailGetValue = null;
+        androidx.lifecycle.MutableLiveData<java.lang.String> viewModelLoginEmail = null;
+        com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
+        androidx.lifecycle.MutableLiveData<java.lang.String> viewModelLoginPassword = null;
+        java.lang.String viewModelLoginPasswordGetValue = null;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
             if ((dirtyFlags & 0xdL) != 0) {
 
-                    if (viewModel != null) {
-                        // read viewModel.email
-                        viewModelEmail = viewModel.getEmail();
+                    if (viewModelLogin != null) {
+                        // read viewModelLogin.email
+                        viewModelLoginEmail = viewModelLogin.getEmail();
                     }
-                    updateLiveDataRegistration(0, viewModelEmail);
+                    updateLiveDataRegistration(0, viewModelLoginEmail);
 
 
-                    if (viewModelEmail != null) {
-                        // read viewModel.email.getValue()
-                        viewModelEmailGetValue = viewModelEmail.getValue();
+                    if (viewModelLoginEmail != null) {
+                        // read viewModelLogin.email.getValue()
+                        viewModelLoginEmailGetValue = viewModelLoginEmail.getValue();
                     }
             }
             if ((dirtyFlags & 0xeL) != 0) {
 
-                    if (viewModel != null) {
-                        // read viewModel.password
-                        viewModelPassword = viewModel.getPassword();
+                    if (viewModelLogin != null) {
+                        // read viewModelLogin.password
+                        viewModelLoginPassword = viewModelLogin.getPassword();
                     }
-                    updateLiveDataRegistration(1, viewModelPassword);
+                    updateLiveDataRegistration(1, viewModelLoginPassword);
 
 
-                    if (viewModelPassword != null) {
-                        // read viewModel.password.getValue()
-                        viewModelPasswordGetValue = viewModelPassword.getValue();
+                    if (viewModelLoginPassword != null) {
+                        // read viewModelLogin.password.getValue()
+                        viewModelLoginPasswordGetValue = viewModelLoginPassword.getValue();
                     }
             }
         }
@@ -247,20 +249,20 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.correoEdt, viewModelEmailGetValue);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.correoEdt, viewModelLoginEmailGetValue);
         }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.correoEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, correoEdtandroidTextAttrChanged);
-            this.iniciarSesionButton.setOnClickListener(mCallback1);
+            this.mboundView3.setOnClickListener(mCallback1);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.passwordEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, passwordEdtandroidTextAttrChanged);
             this.registrarseButton.setOnClickListener(mCallback2);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.passwordEdt, viewModelPasswordGetValue);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.passwordEdt, viewModelLoginPasswordGetValue);
         }
     }
     // Listener Stub Implementations
@@ -269,35 +271,35 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
         switch(sourceId) {
             case 1: {
                 // localize variables for thread safety
-                // viewModel
-                com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
+                // viewModelLogin
+                com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
+                // viewModelLogin != null
+                boolean viewModelLoginJavaLangObjectNull = false;
 
 
 
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
+                viewModelLoginJavaLangObjectNull = (viewModelLogin) != (null);
+                if (viewModelLoginJavaLangObjectNull) {
 
 
-                    viewModel.login();
+                    viewModelLogin.login();
                 }
                 break;
             }
             case 2: {
                 // localize variables for thread safety
-                // viewModel
-                com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
+                // viewModelLogin
+                com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
+                // viewModelLogin != null
+                boolean viewModelLoginJavaLangObjectNull = false;
 
 
 
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
+                viewModelLoginJavaLangObjectNull = (viewModelLogin) != (null);
+                if (viewModelLoginJavaLangObjectNull) {
 
 
-                    viewModel.register();
+                    viewModelLogin.register();
                 }
                 break;
             }
@@ -306,9 +308,9 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.email
-        flag 1 (0x2L): viewModel.password
-        flag 2 (0x3L): viewModel
+        flag 0 (0x1L): viewModelLogin.email
+        flag 1 (0x2L): viewModelLogin.password
+        flag 2 (0x3L): viewModelLogin
         flag 3 (0x4L): null
     flag mapping end*/
     //end

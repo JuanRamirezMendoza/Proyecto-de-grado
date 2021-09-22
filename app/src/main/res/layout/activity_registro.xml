@@ -2,9 +2,10 @@
 <layout>
 
     <data>
+
         <variable
             name="viewModelRegistro"
-            type="com.proyeto.medicineapp.ui.viewmodel.LoginViewModel" />
+            type="com.proyeto.medicineapp.ui.viewmodel.RegisterViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,7 +15,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background"
         android:padding="16dp"
-        tools:context=".ui.view.RegistroView">
+        tools:context=".ui.view.RegisterView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +41,8 @@
                     android:id="@+id/correoRegistrarseEdt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModelRegistro.email}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -55,7 +57,8 @@
                     android:id="@+id/contraseñaRegsitrarseEdt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:text="@={viewModelRegistro.password}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -70,7 +73,8 @@
                     android:id="@+id/contraseñaConfirmRegistrarseEdt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:text="@={viewModelRegistro.passwordConfirm}" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -86,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_button"
+                android:onClick="@{()-> viewModelRegistro.register()}"
                 android:text="registrarse" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

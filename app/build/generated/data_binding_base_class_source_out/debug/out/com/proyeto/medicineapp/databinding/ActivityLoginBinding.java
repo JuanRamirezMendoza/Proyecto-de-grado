@@ -29,9 +29,6 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
   public final ImageView imageView;
 
   @NonNull
-  public final Button iniciarSesionButton;
-
-  @NonNull
   public final TextInputEditText passwordEdt;
 
   @NonNull
@@ -41,27 +38,25 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
   public final Button registrarseButton;
 
   @Bindable
-  protected LoginViewModel mViewModel;
+  protected LoginViewModel mViewModelLogin;
 
   protected ActivityLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextInputEditText correoEdt, TextInputLayout correoTxtInput, ImageView imageView,
-      Button iniciarSesionButton, TextInputEditText passwordEdt, TextInputLayout passwordTxtInput,
-      Button registrarseButton) {
+      TextInputEditText passwordEdt, TextInputLayout passwordTxtInput, Button registrarseButton) {
     super(_bindingComponent, _root, _localFieldCount);
     this.correoEdt = correoEdt;
     this.correoTxtInput = correoTxtInput;
     this.imageView = imageView;
-    this.iniciarSesionButton = iniciarSesionButton;
     this.passwordEdt = passwordEdt;
     this.passwordTxtInput = passwordTxtInput;
     this.registrarseButton = registrarseButton;
   }
 
-  public abstract void setViewModel(@Nullable LoginViewModel viewModel);
+  public abstract void setViewModelLogin(@Nullable LoginViewModel viewModelLogin);
 
   @Nullable
-  public LoginViewModel getViewModel() {
-    return mViewModel;
+  public LoginViewModel getViewModelLogin() {
+    return mViewModelLogin;
   }
 
   @NonNull

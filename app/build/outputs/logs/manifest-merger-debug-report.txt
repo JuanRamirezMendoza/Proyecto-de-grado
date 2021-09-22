@@ -210,10 +210,10 @@ activity#com.proyeto.medicineapp.ui.view.MainView
 ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:16:9-77
 	android:name
 		ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:16:19-74
-activity#com.proyeto.medicineapp.activitys.RegistroActivity
-ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:9-87
+activity#com.proyeto.medicineapp.ui.view.RegisterView
+ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:9-81
 	android:name
-		ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:19-84
+		ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:17:19-78
 activity#com.proyeto.medicineapp.ui.view.LoginView
 ADDED from D:\Sebastian Ramirez\Documentos\AndroidProjects\proyecto-de-grado\proyecto-de-grado\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name

@@ -13,6 +13,11 @@ com/proyeto/medicineapp/databinding/ActivityLoginBinding.java
  com.proyeto.medicineapp.databinding.ActivityLoginBinding
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
+com/proyeto/medicineapp/databinding/ActivityRegistroBindingImpl.java
+ com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl
+ com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl$1
+ com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl$2
+ com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl$3
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
 com/proyeto/medicineapp/databinding/ActivityDeleteBinding.java

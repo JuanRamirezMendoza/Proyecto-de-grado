@@ -60,7 +60,7 @@ class LoginView : AppCompatActivity() {
         loginViewModel.navigation.observe(this, {
             when (it) {
                 NAVIGATIONS.GO_REGISTER_VIEW -> {
-                    val intent = Intent(context, RegistroView::class.java)
+                    val intent = Intent(context, RegisterView::class.java)
                     context.startActivity(intent)
                 }
                 NAVIGATIONS.GO_MAIN_VIEW -> {
