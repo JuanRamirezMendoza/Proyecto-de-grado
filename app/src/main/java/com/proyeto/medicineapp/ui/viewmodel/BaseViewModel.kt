@@ -19,7 +19,8 @@ enum class ERRORES{
 
 enum class SUCCESS{
     LOGIN_SUCCES,
-    REGISTER_SUCCES
+    REGISTER_SUCCES,
+    LOG_OUT_SUCCESS
 }
 
 enum class NAVIGATIONS{

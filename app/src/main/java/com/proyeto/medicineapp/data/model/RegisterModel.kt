@@ -8,7 +8,4 @@ data class RegisterModel(val email: String, val password: String, val passwordCo
     fun register(success: () -> Unit, error: () -> Unit){
         firebaseController.register(this, success, error)
     }
-    /*fun auth(success: () -> Unit, error: () -> Unit) {
-        firebaseController.auth(this, success, error)
-    }*/
 }

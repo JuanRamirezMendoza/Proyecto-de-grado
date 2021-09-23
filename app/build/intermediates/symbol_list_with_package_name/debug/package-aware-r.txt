@@ -1845,6 +1845,7 @@ drawable ic_hora_inicio
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_log_out
 drawable ic_logo
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
@@ -2271,6 +2272,7 @@ id radio
 id ratio
 id rectangles
 id recyclerViewList
+id refresh
 id registrarseButton
 id registrarseConfirmButton
 id reverseSawtooth

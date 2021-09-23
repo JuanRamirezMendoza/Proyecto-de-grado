@@ -16,6 +16,10 @@
         "source": "D:\\Sebastian Ramirez\\Documentos\\AndroidProjects\\proyecto-de-grado\\proyecto-de-grado\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "D:\\Sebastian Ramirez\\Documentos\\AndroidProjects\\proyecto-de-grado\\proyecto-de-grado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_log_out.xml.flat",
+        "source": "D:\\Sebastian Ramirez\\Documentos\\AndroidProjects\\proyecto-de-grado\\proyecto-de-grado\\app\\src\\main\\res\\drawable\\ic_log_out.xml"
+    },
+    {
         "merged": "D:\\Sebastian Ramirez\\Documentos\\AndroidProjects\\proyecto-de-grado\\proyecto-de-grado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_edit.xml.flat",
         "source": "D:\\Sebastian Ramirez\\Documentos\\AndroidProjects\\proyecto-de-grado\\proyecto-de-grado\\app\\src\\main\\res\\drawable\\rounded_edit.xml"
     },

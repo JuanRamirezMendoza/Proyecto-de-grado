@@ -39,10 +39,14 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recyclerViewList;
 
+  @NonNull
+  public final FloatingActionButton refresh;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
       @NonNull FloatingActionButton addButton, @NonNull ImageView emptyImage,
       @NonNull TextView emptyText, @NonNull FloatingActionButton logOut,
-      @NonNull ConstraintLayout mainLayout, @NonNull RecyclerView recyclerViewList) {
+      @NonNull ConstraintLayout mainLayout, @NonNull RecyclerView recyclerViewList,
+      @NonNull FloatingActionButton refresh) {
     this.rootView = rootView;
     this.addButton = addButton;
     this.emptyImage = emptyImage;
@@ -50,6 +54,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.logOut = logOut;
     this.mainLayout = mainLayout;
     this.recyclerViewList = recyclerViewList;
+    this.refresh = refresh;
   }
 
   @Override
@@ -111,8 +116,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.refresh;
+      FloatingActionButton refresh = rootView.findViewById(id);
+      if (refresh == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((ConstraintLayout) rootView, addButton, emptyImage, emptyText,
-          logOut, mainLayout, recyclerViewList);
+          logOut, mainLayout, recyclerViewList, refresh);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

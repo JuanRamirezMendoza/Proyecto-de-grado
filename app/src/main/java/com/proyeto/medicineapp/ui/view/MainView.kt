@@ -6,6 +6,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,9 +18,20 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.proyeto.medicineapp.activitys.AddMedActivity
 import com.proyeto.medicineapp.activitys.Medicamento
+import com.proyeto.medicineapp.data.extensionfunctions.toast
+import com.proyeto.medicineapp.databinding.ActivityLoginBinding
+import com.proyeto.medicineapp.databinding.ActivityMainBinding
+import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
+import com.proyeto.medicineapp.ui.viewmodel.MainViewModel
+import com.proyeto.medicineapp.ui.viewmodel.SUCCESS
 
 class MainView : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
+    private val mainViewModel: MainViewModel by viewModels()
+
+    private val context = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +42,14 @@ class MainView : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
         setContentView(R.layout.activity_main)
+
+        mainViewModel.success.observe(this,{
+            when (it) {
+                SUCCESS.LOG_OUT_SUCCESS -> {
+                    toast("sesion cerrada correctamente")
+                }
+            }
+        })
 
         listarMeds()
 
