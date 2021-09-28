@@ -22,6 +22,8 @@ androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
 com/proyeto/medicineapp/databinding/ActivityDeleteBinding.java
  com.proyeto.medicineapp.databinding.ActivityDeleteBinding
+com/proyeto/medicineapp/databinding/ActivityMainBindingImpl.java
+ com.proyeto.medicineapp.databinding.ActivityMainBindingImpl
 com/proyeto/medicineapp/BR.java
  com.proyeto.medicineapp.BR
 com/proyeto/medicineapp/BuildConfig.java

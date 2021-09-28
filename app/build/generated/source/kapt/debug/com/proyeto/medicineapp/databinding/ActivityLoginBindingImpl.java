@@ -25,7 +25,7 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     private final android.widget.Button mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
+    private final android.view.View.OnClickListener mCallback3;
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     // values
@@ -127,8 +127,8 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
         this.registrarseButton.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback1 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 1);
-        mCallback2 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 2);
+        mCallback3 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 2);
+        mCallback2 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -255,9 +255,9 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.correoEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, correoEdtandroidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback1);
+            this.mboundView3.setOnClickListener(mCallback2);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.passwordEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, passwordEdtandroidTextAttrChanged);
-            this.registrarseButton.setOnClickListener(mCallback2);
+            this.registrarseButton.setOnClickListener(mCallback3);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
@@ -269,23 +269,6 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewModelLogin
-                com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
-                // viewModelLogin != null
-                boolean viewModelLoginJavaLangObjectNull = false;
-
-
-
-                viewModelLoginJavaLangObjectNull = (viewModelLogin) != (null);
-                if (viewModelLoginJavaLangObjectNull) {
-
-
-                    viewModelLogin.login();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewModelLogin
@@ -300,6 +283,23 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
 
 
                     viewModelLogin.register();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModelLogin
+                com.proyeto.medicineapp.ui.viewmodel.LoginViewModel viewModelLogin = mViewModelLogin;
+                // viewModelLogin != null
+                boolean viewModelLoginJavaLangObjectNull = false;
+
+
+
+                viewModelLoginJavaLangObjectNull = (viewModelLogin) != (null);
+                if (viewModelLoginJavaLangObjectNull) {
+
+
+                    viewModelLogin.login();
                 }
                 break;
             }

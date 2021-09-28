@@ -41,7 +41,10 @@ class MainView : AppCompatActivity() {
         )
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.lifecycleOwner = this
+        binding.viewModelMain = mainViewModel
 
         mainViewModel.success.observe(this,{
             when (it) {

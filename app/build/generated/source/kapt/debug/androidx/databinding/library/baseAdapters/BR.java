@@ -5,5 +5,7 @@ public class BR {
 
   public static final int viewModelLogin = 1;
 
-  public static final int viewModelRegistro = 2;
+  public static final int viewModelMain = 2;
+
+  public static final int viewModelRegistro = 3;
 }

@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.proyeto.medicineapp.databinding.ActivityLoginBindingImpl;
+import com.proyeto.medicineapp.databinding.ActivityMainBindingImpl;
 import com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
@@ -21,12 +22,15 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYLOGIN = 1;
 
-  private static final int LAYOUT_ACTIVITYREGISTRO = 2;
+  private static final int LAYOUT_ACTIVITYMAIN = 2;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
+  private static final int LAYOUT_ACTIVITYREGISTRO = 3;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.proyeto.medicineapp.R.layout.activity_login, LAYOUT_ACTIVITYLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.proyeto.medicineapp.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.proyeto.medicineapp.R.layout.activity_registro, LAYOUT_ACTIVITYREGISTRO);
   }
 
@@ -44,6 +48,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityLoginBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYMAIN: {
+          if ("layout/activity_main_0".equals(tag)) {
+            return new ActivityMainBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
         }
         case  LAYOUT_ACTIVITYREGISTRO: {
           if ("layout/activity_registro_0".equals(tag)) {
@@ -96,20 +106,22 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(3);
+    static final SparseArray<String> sKeys = new SparseArray<String>(4);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "viewModelLogin");
-      sKeys.put(2, "viewModelRegistro");
+      sKeys.put(2, "viewModelMain");
+      sKeys.put(3, "viewModelRegistro");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
 
     static {
       sKeys.put("layout/activity_login_0", com.proyeto.medicineapp.R.layout.activity_login);
+      sKeys.put("layout/activity_main_0", com.proyeto.medicineapp.R.layout.activity_main);
       sKeys.put("layout/activity_registro_0", com.proyeto.medicineapp.R.layout.activity_registro);
     }
   }

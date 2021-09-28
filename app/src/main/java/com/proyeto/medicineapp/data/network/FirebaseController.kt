@@ -29,11 +29,11 @@ class FirebaseController {
         }
     }
 
-    fun logOut() {
-        instance.signOut()
-    }
-
     fun hasSession(): Boolean {
         return instance.currentUser != null
+    }
+
+    fun signOut(mainModel: MainModel, success: () -> Unit, error: () -> Unit) {
+        instance.signOut()
     }
 }
