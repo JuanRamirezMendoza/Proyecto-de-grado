@@ -33,7 +33,8 @@ class FirebaseController {
         return instance.currentUser != null
     }
 
-    fun signOut(mainModel: MainModel, success: () -> Unit, error: () -> Unit) {
+    fun signOut(success: () -> Unit) {
         instance.signOut()
+        success.invoke()
     }
 }

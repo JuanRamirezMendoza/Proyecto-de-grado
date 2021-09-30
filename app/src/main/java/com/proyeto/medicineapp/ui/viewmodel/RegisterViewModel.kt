@@ -30,28 +30,4 @@ class RegisterViewModel : BaseViewModel() {
             e.printStackTrace()
         }
     }
-    /*registarseConfirmButton.setOnClickListener(View.OnClickListener {
-            if (correo.text.toString().isEmpty() || contraseña.text.toString().isEmpty() || confirmarContraseña.text.toString().isEmpty()) {
-                Toast.makeText(applicationContext, "No deje campos vacios", Toast.LENGTH_SHORT)
-                    .show()
-            } else {
-                if (!confirmarContraseña.text.toString().equals(contraseña.text.toString())) {
-                    Toast.makeText(
-                        applicationContext,
-                        "Las contraseñas no coinciden",
-                        Toast.LENGTH_SHORT
-                    )
-                        .show()
-                } else {
-                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(
-                        correo.text.toString(),
-                        contraseña.text.toString()
-                    ).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            showSuccesfulAlert()
-                        } else {
-                            showAlert()
-                        }
-                    }*/
-
 }

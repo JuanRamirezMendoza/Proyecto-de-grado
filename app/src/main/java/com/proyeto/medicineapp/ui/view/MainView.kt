@@ -23,6 +23,7 @@ import com.proyeto.medicineapp.databinding.ActivityLoginBinding
 import com.proyeto.medicineapp.databinding.ActivityMainBinding
 import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
 import com.proyeto.medicineapp.ui.viewmodel.MainViewModel
+import com.proyeto.medicineapp.ui.viewmodel.NAVIGATIONS
 import com.proyeto.medicineapp.ui.viewmodel.SUCCESS
 
 class MainView : AppCompatActivity() {
@@ -51,6 +52,16 @@ class MainView : AppCompatActivity() {
                 SUCCESS.LOG_OUT_SUCCESS -> {
                     toast("sesion cerrada correctamente")
                 }
+            }
+        })
+
+        mainViewModel.navigation.observe(this,{
+            when(it){
+                NAVIGATIONS.GO_LOGIN_VIEW ->{
+                    val intent = Intent(context, LoginView::class.java)
+                    context.startActivity(intent)
+                }
+
             }
         })
 
