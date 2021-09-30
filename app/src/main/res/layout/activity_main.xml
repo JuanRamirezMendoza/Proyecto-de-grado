@@ -85,6 +85,7 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="28dp"
             android:backgroundTint="@color/logo"
+            android:onClick="@{()-> viewModelMain.createMed()}"
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"

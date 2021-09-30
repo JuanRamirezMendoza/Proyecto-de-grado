@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+<data>
+    <variable
+        name="viewModelAddMed"
+        type="com.proyeto.medicineapp.ui.viewmodel.AddMedViewModel" />
+</data>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".activitys.AddMedActivity"
+    tools:context=".ui.view.AddMedView"
     android:background="@drawable/background">
 
     <LinearLayout
@@ -31,6 +40,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nombreMedEdt"
                 android:layout_width="match_parent"
+                android:text="@={viewModelAddMed.medName}"
                 android:layout_height="wrap_content"
                 android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -47,6 +57,7 @@
                 android:id="@+id/cadaCuantasHorasEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewModelAddMed.medHour}"
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,6 +73,7 @@
                 android:id="@+id/duracionEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewModelAddMed.medDay}"
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,6 +92,7 @@
                 android:onClick="calendario"
                 android:focusable="false"
                 android:clickable="true"
+                android:text="@={viewModelAddMed.medDate}"
                 android:inputType="date"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="hora"
                 android:focusable="false"
+                android:text="@={viewModelAddMed.medHourInit}"
                 android:clickable="true"
                 android:inputType="time"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -114,7 +128,11 @@
             android:layout_width="155dp"
             android:background="@drawable/rounded_button"
             android:layout_height="wrap_content"
+
+            android:onClick="@{()-> viewModelAddMed.registerMed()}"
             android:layout_gravity="center"
             android:text="Agregar medicamento" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

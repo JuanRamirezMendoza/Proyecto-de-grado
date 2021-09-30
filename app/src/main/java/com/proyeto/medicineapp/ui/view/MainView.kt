@@ -16,12 +16,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.proyeto.medicineapp.activitys.AddMedActivity
 import com.proyeto.medicineapp.activitys.Medicamento
 import com.proyeto.medicineapp.data.extensionfunctions.toast
-import com.proyeto.medicineapp.databinding.ActivityLoginBinding
 import com.proyeto.medicineapp.databinding.ActivityMainBinding
-import com.proyeto.medicineapp.ui.viewmodel.LoginViewModel
 import com.proyeto.medicineapp.ui.viewmodel.MainViewModel
 import com.proyeto.medicineapp.ui.viewmodel.NAVIGATIONS
 import com.proyeto.medicineapp.ui.viewmodel.SUCCESS
@@ -42,6 +39,7 @@ class MainView : AppCompatActivity() {
         )
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.lifecycleOwner = this
@@ -65,7 +63,12 @@ class MainView : AppCompatActivity() {
             }
         })
 
-        listarMeds()
+        mainViewModel.navigation.observe(this,{
+            val intent = Intent(context, AddMedView::class.java)
+            context.startActivity(intent)
+        })
+
+        /*listarMeds()
 
         val db = Firebase.firestore
         val collection = db.collection("medicamentos")
@@ -78,7 +81,7 @@ class MainView : AppCompatActivity() {
         }
 
         add_button.setOnClickListener {
-            val intent = Intent(this, AddMedActivity::class.java)
+            val intent = Intent(this, AddMedView::class.java)
             startActivity(intent)
         }
     }
@@ -101,12 +104,12 @@ class MainView : AppCompatActivity() {
 
                 for (document in documents) {
 
-                   /* if (documents.count() == 0) {
+                   *//* if (documents.count() == 0) {
                         emptyImage.getVisibility() == View.VISIBLE
                         emptyText.getVisibility() == View.VISIBLE
                     } else {
                         emptyImage.getVisibility() == View.GONE
-                        emptyText.getVisibility() == View.GONE*/
+                        emptyText.getVisibility() == View.GONE*//*
 
 
                         val cadaCuantasHoras = document.data.get("cadaCuantasHoras").toString()
@@ -132,12 +135,12 @@ class MainView : AppCompatActivity() {
             }
             .addOnFailureListener { exception ->
 
-            }
+            }*/
     }
 
     override fun onResume() {
         super.onResume()
-        listarMeds()
+        //listarMeds()
     }
 
 

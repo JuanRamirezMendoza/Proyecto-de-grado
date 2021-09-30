@@ -1,42 +1,42 @@
 com/proyeto/medicineapp/generated/callback/OnClickListener.java
  com.proyeto.medicineapp.generated.callback.OnClickListener
  com.proyeto.medicineapp.generated.callback.OnClickListener$Listener
-com/proyeto/medicineapp/BuildConfig.java
- com.proyeto.medicineapp.BuildConfig
-com/proyeto/medicineapp/DataBindingTriggerClass.java
- com.proyeto.medicineapp.DataBindingTriggerClass
-com/proyeto/medicineapp/databinding/ViewMedsBinding.java
- com.proyeto.medicineapp.databinding.ViewMedsBinding
-com/proyeto/medicineapp/databinding/ActivityAddMedBinding.java
- com.proyeto.medicineapp.databinding.ActivityAddMedBinding
-androidx/databinding/DataBinderMapperImpl.java
- androidx.databinding.DataBinderMapperImpl
-com/proyeto/medicineapp/DataBinderMapperImpl.java
- com.proyeto.medicineapp.DataBinderMapperImpl
- com.proyeto.medicineapp.DataBinderMapperImpl$InnerBrLookup
- com.proyeto.medicineapp.DataBinderMapperImpl$InnerLayoutIdLookup
-androidx/databinding/library/baseAdapters/BR.java
- androidx.databinding.library.baseAdapters.BR
-com/proyeto/medicineapp/databinding/ActivityDeleteBinding.java
- com.proyeto.medicineapp.databinding.ActivityDeleteBinding
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
-com/proyeto/medicineapp/BR.java
- com.proyeto.medicineapp.BR
 com/proyeto/medicineapp/databinding/ActivityLoginBindingImpl.java
  com.proyeto.medicineapp.databinding.ActivityLoginBindingImpl
  com.proyeto.medicineapp.databinding.ActivityLoginBindingImpl$1
  com.proyeto.medicineapp.databinding.ActivityLoginBindingImpl$2
 com/proyeto/medicineapp/databinding/ActivityRegistroBinding.java
  com.proyeto.medicineapp.databinding.ActivityRegistroBinding
-com/proyeto/medicineapp/databinding/ActivityMainBindingImpl.java
- com.proyeto.medicineapp.databinding.ActivityMainBindingImpl
+com/proyeto/medicineapp/databinding/ViewMedsBinding.java
+ com.proyeto.medicineapp.databinding.ViewMedsBinding
 com/proyeto/medicineapp/databinding/ActivityLoginBinding.java
  com.proyeto.medicineapp.databinding.ActivityLoginBinding
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
 com/proyeto/medicineapp/databinding/ActivityRegistroBindingImpl.java
  com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl
  com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl$1
  com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl$2
  com.proyeto.medicineapp.databinding.ActivityRegistroBindingImpl$3
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/proyeto/medicineapp/databinding/ActivityDeleteBinding.java
+ com.proyeto.medicineapp.databinding.ActivityDeleteBinding
+com/proyeto/medicineapp/databinding/ActivityMainBindingImpl.java
+ com.proyeto.medicineapp.databinding.ActivityMainBindingImpl
+com/proyeto/medicineapp/BR.java
+ com.proyeto.medicineapp.BR
+com/proyeto/medicineapp/BuildConfig.java
+ com.proyeto.medicineapp.BuildConfig
+com/proyeto/medicineapp/DataBinderMapperImpl.java
+ com.proyeto.medicineapp.DataBinderMapperImpl
+ com.proyeto.medicineapp.DataBinderMapperImpl$InnerBrLookup
+ com.proyeto.medicineapp.DataBinderMapperImpl$InnerLayoutIdLookup
+com/proyeto/medicineapp/databinding/ActivityAddMedBinding.java
+ com.proyeto.medicineapp.databinding.ActivityAddMedBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/proyeto/medicineapp/DataBindingTriggerClass.java
+ com.proyeto.medicineapp.DataBindingTriggerClass
 com/proyeto/medicineapp/databinding/ActivityMainBinding.java
  com.proyeto.medicineapp.databinding.ActivityMainBinding

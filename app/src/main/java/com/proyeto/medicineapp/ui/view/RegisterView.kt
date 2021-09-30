@@ -48,7 +48,6 @@ class RegisterView : AppCompatActivity() {
                 ERRORES.EMPTY_FIELDS -> {
                     toast("No deje campos vacios")
                 }
-                else -> ERRORES.NO_ERROR
             }
         })
 
@@ -69,9 +68,6 @@ class RegisterView : AppCompatActivity() {
 
             }
         })
-
-
-
     }
 
     private fun showAlert() {

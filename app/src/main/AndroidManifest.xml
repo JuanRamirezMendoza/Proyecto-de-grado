@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicineApp">
         <activity android:name="com.proyeto.medicineapp.activitys.DeleteActivity"></activity>
-        <activity android:name="com.proyeto.medicineapp.activitys.AddMedActivity" />
+        <activity android:name="com.proyeto.medicineapp.ui.view.AddMedView" />
         <activity android:name="com.proyeto.medicineapp.ui.view.MainView" />
         <activity android:name="com.proyeto.medicineapp.ui.view.RegisterView" />
         <activity android:name="com.proyeto.medicineapp.ui.view.LoginView">

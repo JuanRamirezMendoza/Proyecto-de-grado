@@ -14,7 +14,7 @@ open class BaseViewModel : ViewModel() {
 enum class ERRORES{
     EMPTY_FIELDS,
     WRONG_CREDENTIALS,
-    NO_ERROR
+    CANT_REGISTER_MED
 }
 
 enum class SUCCESS{
@@ -26,5 +26,6 @@ enum class SUCCESS{
 enum class NAVIGATIONS{
     GO_MAIN_VIEW,
     GO_REGISTER_VIEW,
-    GO_LOGIN_VIEW
+    GO_LOGIN_VIEW,
+    GO_ADD_MED
 }

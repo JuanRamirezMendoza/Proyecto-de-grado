@@ -7,10 +7,15 @@ import com.proyeto.medicineapp.data.model.RegisterModel
 
 class MainViewModel : BaseViewModel() {
 
+    private val model = MainModel()
+
     fun logOut(){
-        val model = MainModel()
         model.signOut {
             navigation.value = NAVIGATIONS.GO_LOGIN_VIEW
         }
+    }
+
+    fun createMed(){
+        navigation.value = NAVIGATIONS.GO_ADD_MED
     }
 }

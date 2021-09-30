@@ -1,6 +1,7 @@
 package com.proyeto.medicineapp.data.network
 
 import com.google.firebase.auth.FirebaseAuth
+import com.proyeto.medicineapp.data.model.AddMedModel
 import com.proyeto.medicineapp.data.model.LoginModel
 import com.proyeto.medicineapp.data.model.MainModel
 import com.proyeto.medicineapp.data.model.RegisterModel
@@ -8,6 +9,10 @@ import com.proyeto.medicineapp.data.model.RegisterModel
 class FirebaseController {
 
     private var instance: FirebaseAuth = FirebaseAuth.getInstance()
+
+    fun hasSession(): Boolean {
+        return instance.currentUser != null
+    }
 
     fun auth(model: LoginModel, success: () -> Unit, error: () -> Unit) {
         instance.signInWithEmailAndPassword(model.email, model.password).addOnCompleteListener {
@@ -29,8 +34,8 @@ class FirebaseController {
         }
     }
 
-    fun hasSession(): Boolean {
-        return instance.currentUser != null
+    fun registerMed(model: AddMedModel, success: () -> Unit, error: () -> Unit){
+
     }
 
     fun signOut(success: () -> Unit) {

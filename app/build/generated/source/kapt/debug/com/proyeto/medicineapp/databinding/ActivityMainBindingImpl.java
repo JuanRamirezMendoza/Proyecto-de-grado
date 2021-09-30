@@ -14,16 +14,17 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.recyclerViewList, 2);
-        sViewsWithIds.put(R.id.emptyImage, 3);
-        sViewsWithIds.put(R.id.emptyText, 4);
-        sViewsWithIds.put(R.id.refresh, 5);
-        sViewsWithIds.put(R.id.addButton, 6);
+        sViewsWithIds.put(R.id.recyclerViewList, 3);
+        sViewsWithIds.put(R.id.emptyImage, 4);
+        sViewsWithIds.put(R.id.emptyText, 5);
+        sViewsWithIds.put(R.id.refresh, 6);
     }
     // views
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback1;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -33,19 +34,21 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6]
-            , (android.widget.ImageView) bindings[3]
-            , (android.widget.TextView) bindings[4]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2]
+            , (android.widget.ImageView) bindings[4]
+            , (android.widget.TextView) bindings[5]
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[1]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[2]
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6]
             );
+        this.addButton.setTag(null);
         this.logOut.setTag(null);
         this.mainLayout.setTag(null);
         setRootTag(root);
         // listeners
         mCallback1 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -107,25 +110,48 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements com.
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
+            this.addButton.setOnClickListener(mCallback2);
             this.logOut.setOnClickListener(mCallback1);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewModelMain
-        com.proyeto.medicineapp.ui.viewmodel.MainViewModel viewModelMain = mViewModelMain;
-        // viewModelMain != null
-        boolean viewModelMainJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewModelMain
+                com.proyeto.medicineapp.ui.viewmodel.MainViewModel viewModelMain = mViewModelMain;
+                // viewModelMain != null
+                boolean viewModelMainJavaLangObjectNull = false;
 
 
 
-        viewModelMainJavaLangObjectNull = (viewModelMain) != (null);
-        if (viewModelMainJavaLangObjectNull) {
+                viewModelMainJavaLangObjectNull = (viewModelMain) != (null);
+                if (viewModelMainJavaLangObjectNull) {
 
 
-            viewModelMain.logOut();
+                    viewModelMain.logOut();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModelMain
+                com.proyeto.medicineapp.ui.viewmodel.MainViewModel viewModelMain = mViewModelMain;
+                // viewModelMain != null
+                boolean viewModelMainJavaLangObjectNull = false;
+
+
+
+                viewModelMainJavaLangObjectNull = (viewModelMain) != (null);
+                if (viewModelMainJavaLangObjectNull) {
+
+
+                    viewModelMain.createMed();
+                }
+                break;
+            }
         }
     }
     // dirty flag

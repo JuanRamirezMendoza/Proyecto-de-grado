@@ -24,7 +24,7 @@ public class ActivityRegistroBindingImpl extends ActivityRegistroBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -162,7 +162,7 @@ public class ActivityRegistroBindingImpl extends ActivityRegistroBinding impleme
         this.registrarseConfirmButton.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 1);
+        mCallback5 = new com.proyeto.medicineapp.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -318,7 +318,7 @@ public class ActivityRegistroBindingImpl extends ActivityRegistroBinding impleme
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.contraseAConfirmRegistrarseEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, contraseAConfirmRegistrarseEdtandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.contraseARegsitrarseEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, contraseARegsitrarseEdtandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.correoRegistrarseEdt, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, correoRegistrarseEdtandroidTextAttrChanged);
-            this.registrarseConfirmButton.setOnClickListener(mCallback4);
+            this.registrarseConfirmButton.setOnClickListener(mCallback5);
         }
         if ((dirtyFlags & 0x1cL) != 0) {
             // api target 1
